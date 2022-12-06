@@ -1,0 +1,44 @@
+#title{
+    
+    background-color: white;
+    height: 50px;
+    text-align: center;
+}
+
+.mapa{
+    background-color: red;   
+    display: inline-block;
+}
+
+#slider{
+
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+.rc-slider-mark-text{
+    
+    font-weight: bold;
+    color: black;
+}
+
+#dropdown{
+
+    width: 200px; ;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 130px;
+
+}
+
+.rowFechaHora{
+
+    background-color: rgb(141, 169, 196);
+    height: 150px;
+    width: 470px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 250px;
+    margin-left: 150px;
+}
