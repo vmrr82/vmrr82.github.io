@@ -4,16 +4,11 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 
 
-#shapeFile = gpd.read_file('heatMap_location\localidades.zip')
+
 file = pd.read_csv('heatMap_location\locations.csv')
 file['location_date'] = pd.to_datetime(file['location_date'])
 file['fecha'] = pd.to_datetime(file['location_date']).dt.date
 file['hora'] = pd.to_datetime(file['location_date']).dt.time
-
-agrupar = file.groupby(file.phone_id)
-phoneIdList = []
-for i in agrupar:
-    phoneIdList.append(i)
 
 
 fig = px.density_mapbox(mapbox_style="stamen-terrain",zoom=11,center={'lat':39.51228846680233, 'lon':2.5049221227392557},width=800,height=600)
@@ -64,7 +59,7 @@ def sliderTime(timeValue,dateValue):
     
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=80)
 
     
     
